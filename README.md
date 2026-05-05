@@ -71,13 +71,15 @@ This solution is a single-page analytics dashboard that fetches the entire datas
    npm run build
    ```
 
-## What I would do with more time
+## Future Optimizations & Roadmap
 
+- **Incremental Data Streaming:** Transition from batch fetching to an incremental streaming approach. This would allow the dashboard to render initial data immediately while the rest of the 34,000+ points load in the background, significantly improving "Time to Interactive" (TTI).
+- **Web Workers for Heavy Processing:** Offload the statistical engine and coverage gap geometry calculations to Web Workers. This would ensure the UI remains buttery smooth (60 FPS) even during complex data processing tasks.
+- **IndexedDB for Persistent Caching:** Replace `sessionStorage` with `IndexedDB` to enable more robust caching. This would allow the application to handle even larger datasets and persist state across browser restarts without hitting the 5MB limit.
+- **Spatial Indexing (R-tree):** Implement client-side spatial indexing for the map to allow near-instant point-in-polygon queries and "nearest locker" searches without iterating through the entire array.
+- **Binary Data Transfer:** Optimize the API payload by switching from JSON to a binary format like Protocol Buffers, which could reduce the network transfer size by up to 60%.
 - **Competitor Benchmarking:** Integrate datasets from competitors (Allegro One Box, Orlen Paczka) to perform market share analysis and competitive density mapping.
 - **Predictive Location Scoring:** Implement a scoring model to suggest optimal locations for new lockers based on population density and current network gaps.
-- **Enhanced Performance:** Implement code-splitting for heavy dependencies like Leaflet and Recharts to reduce the initial bundle size (from ~777kB to ~300kB).
-- **Comprehensive Testing:** Expand test coverage with Vitest for core analytical logic (`statistics.ts` and `coverage.ts`).
-- **Exporting Tools:** Add functionality to export processed data and charts to CSV or PDF for business reporting.
 
 ## AI usage
 
