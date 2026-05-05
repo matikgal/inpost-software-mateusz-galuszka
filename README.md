@@ -3,13 +3,15 @@
 ## Author
 
 - **Name:** Mateusz Gałuszka
-- **Email:** [mateusz.galuszka21@gmail.com]
+- **Email:** mateusz.galuszka21@gmail.com
 
 ## Overview
 
 The InPost Network Intelligence Dashboard is a high-performance analytical tool designed to visualize and analyze the vast network of over 34,000 InPost parcel lockers across Poland. It solves the challenge of evaluating network coverage and regional investment needs by providing real-time insights into density, service standards, and coverage gaps directly in the browser.
 
 ## Demo & Description
+
+**Live Demo:** [https://inpost-software-mateusz-galuszka.netlify.app/](https://inpost-software-mateusz-galuszka.netlify.app/)
 
 This solution is a single-page analytics dashboard that fetches the entire dataset of approximately 34,000 points from the InPost API. It processes this data client-side to calculate key performance indicators and generate interactive visualizations.
 
